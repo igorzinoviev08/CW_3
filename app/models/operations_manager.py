@@ -1,4 +1,4 @@
-class Operation:
+class OperationsManager:
     def __init__(self, all_operations):
         self.all_operations = all_operations
         self.last_five_operations = self.sorted_last_five_operations()

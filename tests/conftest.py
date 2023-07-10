@@ -1,5 +1,7 @@
 import pytest
-from app.models.operation import Operation
+from app.models.operations_manager import OperationsManager
+
+
 @pytest.fixture
 def operations_instance():
     all_operations = [
@@ -45,7 +47,7 @@ def operations_instance():
             'id': 5,
             'date': '2021-01-01T12:00:00',
             'description': 'Operation 5',
-            'to':'Account B',
+            'to': 'Account B',
             'operationAmount': {'amount': 100, 'currency': {'name': 'RUB'}},
             'state': 'EXECUTED'
         },
@@ -60,4 +62,4 @@ def operations_instance():
         }
 
     ]
-    return Operation(all_operations)
+    return OperationsManager(all_operations)

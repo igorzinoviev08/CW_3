@@ -1,8 +1,8 @@
 from settings import PATH_OPERATION_JSON
-from app.models.data import Data
-from app.models.operation import Operation
+from app.models.data_manager import DataManager
+from app.models.operations_manager import OperationManager
 
 if __name__ == '__main__':
-    all_operations = Data.read_from_json(PATH_OPERATION_JSON)
-    last_five_operation = Operation(all_operations)
+    all_operations = DataManager.read_from_json(PATH_OPERATION_JSON)
+    last_five_operation = OperationManager(all_operations)
     last_five_operation.show_last_operation()

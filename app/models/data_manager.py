@@ -1,7 +1,7 @@
 import json
 
 
-class Data:
+class DataManager:
     @staticmethod
     def read_from_json(path):
         with open(path, 'r', encoding='utf-8') as fp:
